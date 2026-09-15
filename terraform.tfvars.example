@@ -1,0 +1,17 @@
+# Copy to terraform.tfvars; this example contains no credentials.
+subscription_id = "87101dd8-0f2d-4b39-83ac-38aa3035a537"
+tenant_id       = "c7b3400e-014c-41bf-b6c1-111a3b1e933f"
+location        = "swedencentral"
+name_prefix     = "apimshglab"
+virtual_network_cidr = "10.47.0.0/24"
+publisher_name  = "APIM self-hosted lab"
+publisher_email = "replace-with-your-email@example.com"
+
+# Change this non-secret marker and apply at least every 29 days to rotate the token.
+gateway_token_rotation_id = "initial"
+
+# Allow ACR pull-role propagation before Container Apps starts the built image.
+acr_role_propagation_wait = "180s"
+
+# Front Door managed Private Link region (independent of the origin's location).
+frontdoor_private_link_location = "swedencentral"

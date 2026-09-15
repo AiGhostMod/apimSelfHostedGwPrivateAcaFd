@@ -1,0 +1,87 @@
+# Terraform working data and local state. State can contain sensitive values.
+.terraform/
+.terraform.tfstate.lock.info
+terraform.tfstate.d/
+*.tfstate
+*.tfstate.*
+
+# Saved plans and machine-readable outputs can also contain sensitive values.
+*.tfplan
+*.plan
+tfplan
+tfplan.*
+terraform-outputs*.json
+outputs.json
+
+# Local variable files. Commit only sanitized examples.
+terraform.tfvars
+*.auto.tfvars
+*.auto.tfvars.json
+*.tfvars.json
+!*.tfvars.example
+!*.tfvars.example.json
+
+# Terraform CLI credentials, local overrides, and crash/debug logs.
+.terraformrc
+terraform.rc
+credentials.tfrc.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+crash.log
+crash.*.log
+*.tf.log
+
+# Azure CLI state and exported credentials.
+.azure/
+azureProfile.json
+accessTokens.json
+servicePrincipals.json
+
+# Environment files and common secret/key material.
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.jks
+*.keystore
+*.mobileprovision
+secrets.json
+secrets.*.json
+secrets.yaml
+secrets.yml
+
+# Test, coverage, cache, and temporary artifacts.
+.smoke-test-*/
+.smoke-unit-*/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Virtual environments and package caches.
+.venv/
+venv/
+env/
+.cache/
+
+# IDE and operating-system metadata.
+.idea/
+.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# Keep the provider dependency lock file tracked after terraform init.
+!.terraform.lock.hcl
